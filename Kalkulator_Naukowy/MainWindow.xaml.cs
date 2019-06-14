@@ -98,9 +98,6 @@ namespace Kalkulator_Naukowy
         /// </summary>
         private void zmienRownanie(string rownanie, bool dodatek = false)
         {
-            // USUWA NIEPOTRZEBNE MIEJSCA DZIESIĘTNE
-            rownanie = Regex.Replace(rownanie, @"(\d+)\.\s", "$1 ");
-
             if (rownanie.Length > 10)
                 Rownanie.FontSize = 18;
 
