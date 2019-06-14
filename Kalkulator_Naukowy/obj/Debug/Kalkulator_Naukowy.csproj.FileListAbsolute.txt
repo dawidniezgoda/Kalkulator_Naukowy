@@ -1,0 +1,15 @@
+C:\Users\dawid\source\repos\Kalkulator_Naukowy\Kalkulator_Naukowy\obj\Debug\Kalkulator_Naukowy.csprojAssemblyReference.cache
+C:\Users\dawid\source\repos\Kalkulator_Naukowy\Kalkulator_Naukowy\obj\Debug\MainWindow.g.cs
+C:\Users\dawid\source\repos\Kalkulator_Naukowy\Kalkulator_Naukowy\obj\Debug\App.g.cs
+C:\Users\dawid\source\repos\Kalkulator_Naukowy\Kalkulator_Naukowy\obj\Debug\Kalkulator_Naukowy_MarkupCompile.cache
+C:\Users\dawid\source\repos\Kalkulator_Naukowy\Kalkulator_Naukowy\obj\Debug\Kalkulator_Naukowy_MarkupCompile.lref
+C:\Users\dawid\source\repos\Kalkulator_Naukowy\Kalkulator_Naukowy\bin\Debug\Kalkulator_Naukowy.exe.config
+C:\Users\dawid\source\repos\Kalkulator_Naukowy\Kalkulator_Naukowy\bin\Debug\Kalkulator_Naukowy.exe
+C:\Users\dawid\source\repos\Kalkulator_Naukowy\Kalkulator_Naukowy\bin\Debug\Kalkulator_Naukowy.pdb
+C:\Users\dawid\source\repos\Kalkulator_Naukowy\Kalkulator_Naukowy\obj\Debug\MainWindow.baml
+C:\Users\dawid\source\repos\Kalkulator_Naukowy\Kalkulator_Naukowy\obj\Debug\Kalkulator_Naukowy.g.resources
+C:\Users\dawid\source\repos\Kalkulator_Naukowy\Kalkulator_Naukowy\obj\Debug\Kalkulator_Naukowy.Properties.Resources.resources
+C:\Users\dawid\source\repos\Kalkulator_Naukowy\Kalkulator_Naukowy\obj\Debug\Kalkulator_Naukowy.csproj.GenerateResource.cache
+C:\Users\dawid\source\repos\Kalkulator_Naukowy\Kalkulator_Naukowy\obj\Debug\Kalkulator_Naukowy.csproj.CoreCompileInputs.cache
+C:\Users\dawid\source\repos\Kalkulator_Naukowy\Kalkulator_Naukowy\obj\Debug\Kalkulator_Naukowy.exe
+C:\Users\dawid\source\repos\Kalkulator_Naukowy\Kalkulator_Naukowy\obj\Debug\Kalkulator_Naukowy.pdb
