@@ -6,37 +6,39 @@ using System.Windows.Controls;
 namespace Kalkulator_Naukowy
 {
     /// <summary>
-    /// Kod podłączony do MainWindow.xaml
+    /// Interaction logic with MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
-        //ROZWIAR LICZBY JAKA JEST WYŚWIETLANA W PAMIĘCI
+        //Rozmiar pamięci. Maksymalny rozmiar liczby jaka zostanie wyświetlona w pamięci.
         const int dlugoscPamieci = 6;
-        //ROZMIAR CZCIONKI W TEXTBOXIE WYNIK
+        //Rozmiar czcionki w TextBoxie Wynik.
         const int rozmiarCzcionki = 36;
 
-        //ZMIENNA, USTAWIANA NA WARTOŚĆ TRUE, JEŚLI WYKONYWANE JEST DZIAŁANIE
+        //Zmienna ustawiana na wartość true, jeśli wykonywane jest działanie
         bool operacjaBool;
-        //ZMIENNA USTAWIANA NA WARTOŚĆ TRUE, JEŚLI ZOSTAŁA WYWOWAŁANA FUNKCJA SIN COS TAN LN LUB LOG
+        //Zmienna ustawiana na wartość true, jeśli została wywołana funkcja SIN COS TAN LN lub LOG.
         bool funkcjaBool;
-        // ZMIENNA USTAWIANA NA WARTOŚĆ TRUE, JEŚLI MA ZOSTAĆ WYCZYSZCZONY TEXTBOX WYNIK PO WPROWADZENIU LICZBY
+        //Zmienna ustawiana na wartość true, jeśli ma zostać wyczyszczony TextBox Wynik po wprowadzeniu liczby.
         bool zerujBool;
-        // ZMIENNA USTAWIANA NA WARTOŚĆ TRUE, JEŚLI W TEXTBOXIE WYNIK JEST REZULTAT JAKIEGOŚ DZIAŁANIA
+        //Zmienna ustawiana na wartość true, jeśli w TextBoxie Wynik jest rezultat jakiegoś działania.
         bool rezultatBool;
-        // ZMIENNA USTAWIANA NA WARTOŚĆ TRUE, JEŚLI POLE TEKSTOWE WYNIK NIE ZOSTAŁO ZMIENIONE PO NACIŚNIĘCIU OPERACJI
+        //Zmienna ustawiana na wartość true, jeśli pole tekstowe Wynik nie zostało zmienione po naciśnięciu operacji.
         bool staryTekstBool;
-        // PRZECHOWYWANA LICZBA W PAMIĘCI
+        //Przechowywana liczba w pamięci.
         double pamiec = 0;
-        // PRZECHOWUJE TEKST PO WYBRANIU NOWEJ OPERACJI MATEMATYCZNEJ
+        //Przechowuje tekst po wybraniu nowej operacji matematycznej.
         string poprzedniTekst;
-        // BŁĘDY
+
+        // Komunikaty o błędach
         static string NADMIAR = "Nadmiar!";
         static string BLAD = "Błąd!";
         static string NIE_LICZBA = "NaN!";
         string[] bledy = { NADMIAR, BLAD, NIE_LICZBA };
 
         operacje operacja = operacje.BRAK;
-        //TYP WYLICZENIOWY ZAWIERAJĄCY PODSTAWOWE OPERACJE MATEMATYCZNE
+
+        //Typ wyliczeniowy zawierający podstawowe operacje matematyczne.
         enum operacje
         {
             DODAWANIE,
@@ -54,6 +56,8 @@ namespace Kalkulator_Naukowy
         /// <summary>
         /// Wyświetla tekst podany jako parametr w TextBoxie Wynik
         /// </summary>
+        /// <param name="tekst">Łańcuch znaków przechowujący wynik operacji.</param>
+        /// <param name="c">Typ boolean przechowujący informację o tym, czy ma być wyczyszczony ekran po wprowadzeniu liczby. Domyślna wartość to prawda.</param>
         private void wyswietlWynik(string tekst, bool c = true)
         {
             try
@@ -81,6 +85,7 @@ namespace Kalkulator_Naukowy
         /// <summary>
         /// Jeżeli wystąpi błąd to zostaje wyświetlany na ekran.
         /// </summary>
+        /// <param name="tekst">Łańcuch znaków przechowujący przechowujący informację o błędzie.</param>
         private void pokazBlad(string tekst)
         {
             Wynik.Text = tekst;
@@ -95,6 +100,8 @@ namespace Kalkulator_Naukowy
         /// <summary>
         /// Aktualizuje TextBox Równanie jeżeli dołączane równanie jest prawdziwe
         /// </summary>
+        /// <param name="rownanie">Łańcuch znaków przechowujący równanie.</param>
+        /// <param name="dodatek">Typ boolean informujący o tym czy równanie jest częścią dołączoną do innego równania. Domyślnie jest to fałsz.</param>
         private void zmienRownanie(string rownanie, bool dodatek = false)
         {
             if (rownanie.Length > 10)
@@ -117,7 +124,7 @@ namespace Kalkulator_Naukowy
         }
 
         /// <summary>
-        /// Parsowanie stringa na double i zwrócenie go - UnitTest11
+        /// Parsowanie stringa na double i zwracanie go.
         /// </summary>
         private double zwrocLiczbe()
         {
@@ -126,7 +133,7 @@ namespace Kalkulator_Naukowy
         }
 
         /// <summary>
-        /// Resetowanie rozmiaru czcionki - UnitTest10
+        /// Resetowanie rozmiaru czcionki.
         /// </summary>
         private void zresetujRozmiarCzcionki()
         {
@@ -359,7 +366,7 @@ namespace Kalkulator_Naukowy
         }
 
         /// <summary>
-        /// Informacja o zmianie liczby na rzeczywistą - UnitTest9
+        /// Informacja o zmianie liczby na rzeczywistą.
         /// </summary>
         private void liczbaDecymalna_Click(object sender, RoutedEventArgs e)
         {
@@ -393,7 +400,7 @@ namespace Kalkulator_Naukowy
         }
 
         /// <summary>
-        /// Dodanie wartości do pamięci - UnitTest8
+        /// Dodanie wartości do pamięci.
         /// </summary>
         private void przyciskMDodaj_Click(object sender, RoutedEventArgs e)
         {
@@ -404,7 +411,7 @@ namespace Kalkulator_Naukowy
         }
 
         /// <summary>
-        /// Odjęcie wartości z pamięci - UnitTest7
+        /// Odjęcie wartości z pamięci.
         /// </summary>
         private void przyciskModejmij_Click(object sender, RoutedEventArgs e)
         {
@@ -415,7 +422,7 @@ namespace Kalkulator_Naukowy
         }
 
         /// <summary>
-        /// Resetowanie pamięci - UnitTest6
+        /// Resetowanie pamięci.
         /// </summary>
         private void przyciskMC_Click(object sender, RoutedEventArgs e)
         {
@@ -424,7 +431,7 @@ namespace Kalkulator_Naukowy
         }
 
         /// <summary>
-        /// Wyświetlenie wartości z pamięci - UnitTest5
+        /// Wyświetlenie wartości z pamięci.
         /// </summary>
         private void przyciskMR_Click(object sender, RoutedEventArgs e)
         {
@@ -434,7 +441,7 @@ namespace Kalkulator_Naukowy
         }
 
         /// <summary>
-        /// Resetowanie do ustawień domyślnych - UnitTest4
+        /// Resetowanie do ustawień domyślnych.
         /// </summary>
         private void przyciskC_Click(object sender, RoutedEventArgs e)
         {
@@ -446,7 +453,7 @@ namespace Kalkulator_Naukowy
         }
 
         /// <summary>
-        /// Resetowanie aktualnej wartości - UnitTest3
+        /// Resetowanie aktualnej wartości.
         /// </summary>
         private void przyciskCe_Click(object sender, RoutedEventArgs e)
         {
@@ -455,7 +462,7 @@ namespace Kalkulator_Naukowy
         }
 
         /// <summary>
-        /// Usuwanie ostatniego znaku - UnitTest1, UnitTest2
+        /// Usuwanie ostatniego znaku.
         /// </summary>
         private void przyciskCofnij_Click(object sender, RoutedEventArgs e)
         {
